@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BN_Utils"
-  s.version      = "1.1.2"
+  s.version      = "1.2.1"
   s.summary      = "BN_Utils是一个项目模板开发工具包"
   s.description  = "BN_Utils是一个项目模板开发工具包,包含了一些控件封装，工具类等，可加快开发速度。"
 

@@ -15,6 +15,7 @@
 #import "BN_View.h"
 #import "BN_TableView.h"
 #import "BN_CollectionView.h"
+#import "BN_ViewHeight.h"
 
 //#if __has_include(<BN_Kit/BN_Kit.h>)
 //#import <BN_Utils/BN_Globle.h>
