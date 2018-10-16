@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BN_Utils"
-  s.version      = "1.1.0"
+  s.version      = "1.1.2"
   s.summary      = "BN_Utils是一个项目模板开发工具包"
   s.description  = "BN_Utils是一个项目模板开发工具包,包含了一些控件封装，工具类等，可加快开发速度。"
 
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto"
 
   # s.resource  = "icon.png"
-  s.resources = "BN_Utils/BN_Resources/*.png"
+  # s.resources = "BN_Utils/BN_Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
