@@ -1,0 +1,74 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Utilis' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+    pod 'AESCrypt-ObjC'
+    pod 'AFNetworking'
+    
+    pod 'FCUUID'
+    pod 'FLAnimatedImage'
+    
+    pod 'GTMBase64'
+    
+    pod 'MBProgressHUD'
+    pod 'MJExtension'
+    pod 'MJRefresh'
+    
+    pod 'PPNumberButton'
+    pod 'PopoverView'
+    
+    pod 'SDCycleScrollView'
+    pod 'SDWebImage'
+    
+    pod 'TZImagePickerController'
+    pod 'Toast'
+
+    pod 'YYCache'
+    pod 'YYModel'
+    
+#    pod 'AMap2DMap-NO-IDFA'
+
+
+#    pod 'AMapSearch-NO-IDFA'
+#    pod 'AMapLocation-NO-IDFA'
+#    pod 'AMapNavi-NO-IDFA'
+
+    
+#    pod 'BN_Utils'
+
+    pod 'BN_Kit'
+    pod 'BN_Globle'
+
+    pod 'BN_Category'
+#    pod 'BN_View'
+#    pod 'BN_CollectionView'
+#    pod 'BN_TableViewCell'
+#    pod 'BN_ViewHeight'
+
+
+#pod 'FCUUID'
+#pod 'FCUUID'
+#pod 'FCUUID'
+
+
+#import "MBProgressHUD.h"
+#import "PopoverView.h"
+  # Pods for Utilis
+
+end
+
+
+#- (NSArray *)arrayWithObjOffset:(NSInteger)offSet{
+#    __block NSMutableArray * marr = [NSMutableArray arrayWithCapacity:0];
+#    
+#    for (NSInteger i = 0; i < self.count; i++) {
+#        id obj = self[i];
+#        if ([obj isEqualToString:@""]) continue;
+#            id value = [obj isKindOfClass:[NSNumber class]] ? @([obj integerValue] + offSet) : [@([obj integerValue] + offSet) stringValue];
+#            [marr addSafeObjct:value];
+#            }
+#            return marr.copy;
+#            }
