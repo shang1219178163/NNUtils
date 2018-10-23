@@ -34,13 +34,9 @@
 
     self.title = self.controllerName;
 
-    
-    
-    
     DDLog(@"_%p_%p_",Manger.shared,Manger.shared)
     [Manger destoryShared];
     DDLog(@"_%p_%p_",Manger.shared,Manger.shared)
-
 
 }
 
