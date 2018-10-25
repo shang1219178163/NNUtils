@@ -28,6 +28,8 @@ target 'Utilis' do
 
     pod 'YYCache'
     pod 'YYModel'
+    pod 'YYWebImage'
+
     
 #    pod 'AMap2DMap-NO-IDFA'
 

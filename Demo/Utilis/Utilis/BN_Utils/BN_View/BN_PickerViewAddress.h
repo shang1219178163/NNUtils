@@ -60,6 +60,7 @@
  @return BN_PickerViewAddress
  */
 +(BN_PickerViewAddress *)pickerViewCancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle;
+- (instancetype)initWithCancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle;
 
 /**
  传入之前选择的地址(不要做字符处理)

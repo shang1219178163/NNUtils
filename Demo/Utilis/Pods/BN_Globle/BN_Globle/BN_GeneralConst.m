@@ -94,9 +94,9 @@ const CGFloat KFZ_Fifth =  10;
 
 #pragma mark - -视图
 
-NSString * const kIMAGE_arrowRight = @"img_arrowRight.png";
+NSString * const kIMAGE_arrowRight = @"img_arrowRight_gray.png";
 NSString * const kIMAGE_arrowDown = @"img_arrowDown_black.png";
-NSString * const kIMAGE_arrowBack = @"img_btnBack.png";
+NSString * const kIMAGE_arrowBack = @"img_arrowLeft_white.png";
 
 NSString * const kIMAGE_default_User = @"img_portrait_Default.png";
 NSString * const kIMAGE_default_User_N = @"img_headPortrait_N.png";

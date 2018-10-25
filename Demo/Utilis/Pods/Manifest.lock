@@ -47,7 +47,13 @@ PODS:
   - TZImagePickerController (3.0.9)
   - UICKeyChainStore (2.1.2)
   - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
   - YYModel (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - AESCrypt-ObjC
@@ -69,6 +75,7 @@ DEPENDENCIES:
   - TZImagePickerController
   - YYCache
   - YYModel
+  - YYWebImage
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -91,7 +98,9 @@ SPEC REPOS:
     - TZImagePickerController
     - UICKeyChainStore
     - YYCache
+    - YYImage
     - YYModel
+    - YYWebImage
 
 SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
@@ -113,8 +122,10 @@ SPEC CHECKSUMS:
   TZImagePickerController: ea3e906af8caa7088f612ad673feb73cc6aa6bfc
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 32ebb746b4360b0734f8e67de3fe75ba3710b387
+PODFILE CHECKSUM: d1af82e2d9522d1563ae46253c74559ef32a8794
 
 COCOAPODS: 1.5.0

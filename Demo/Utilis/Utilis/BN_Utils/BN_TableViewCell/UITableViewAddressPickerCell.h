@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import "UITableViewCell+AddView.h"
 
-@interface UITableViewAddressPickerCell : UITableViewCell
+#import "BN_PickerViewAddress.h"
+
+@interface UITableViewAddressPickerCell : UITableViewCell<UITextFieldDelegate>
+
+@property (nonatomic, strong) NSString * addressInfo;
+
+@property (nonatomic, strong) BN_PickerViewAddress * pickerAddress;
+
+@property (nonatomic, strong) void(^block)(UITableViewAddressPickerCell *view, NSString * addressInfo);
 
 @end
 
-NS_ASSUME_NONNULL_END
+

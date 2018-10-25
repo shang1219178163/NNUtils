@@ -32,7 +32,7 @@
 - (UITableView *)tableView {
     UITableView* table = objc_getAssociatedObject(self, _cmd);
     if (table == nil) {
-        table = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         [table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
         table.layer.borderColor = UIColor.grayColor.CGColor;
         table.layer.borderWidth = 1;
