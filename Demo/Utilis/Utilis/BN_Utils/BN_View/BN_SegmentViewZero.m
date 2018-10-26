@@ -62,7 +62,7 @@ static const CGFloat KH_lineVertical = 1;
             
             CGRect labRect = CGRectMake(titleWith * i, 0, titleWith, height);
 //            DDLog(@"labRect%ld_%@",i,NSStringFromCGRect(labRect));
-            UILabel * label = [self createLabelWithRect:labRect text:titles[i] textColor:UIColor.blackColor tag:kTAG_LABEL+i patternType:@"2" font:17 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter hasGesture:YES target:self aSelector:@selector(tapView:)];
+            UILabel * label = [self createLabelWithRect:labRect text:titles[i] textColor:UIColor.blackColor tag:kTAG_LABEL+i patternType:@2 font:17 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter hasGesture:YES target:self aSelector:@selector(tapView:)];
             [backgroudView addSubview:label];
             
             if (selectIndex == i) {
@@ -233,7 +233,7 @@ static const CGFloat KH_lineVertical = 1;
     }
 }
 
-- (UILabel *)createLabelWithRect:(CGRect)rect text:(NSString *)text textColor:(UIColor *)textColor tag:(NSInteger)tag patternType:(NSString *)patternType font:(CGFloat)fontSize backgroudColor:(UIColor *)backgroudColor alignment:(NSTextAlignment)alignment hasGesture:(BOOL)hasGesture target:(id)target aSelector:(SEL)aSelector;
+- (UILabel *)createLabelWithRect:(CGRect)rect text:(NSString *)text textColor:(UIColor *)textColor tag:(NSInteger)tag patternType:(NSNumber *)patternType font:(CGFloat)fontSize backgroudColor:(UIColor *)backgroudColor alignment:(NSTextAlignment)alignment hasGesture:(BOOL)hasGesture target:(id)target aSelector:(SEL)aSelector;
 {
     UILabel * label = [[UILabel alloc] initWithFrame:rect];
     

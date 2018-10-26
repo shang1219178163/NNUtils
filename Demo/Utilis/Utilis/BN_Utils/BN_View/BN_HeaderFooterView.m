@@ -40,7 +40,7 @@
 
 -(UIImageView *)imgViewLeft{
     if (!_imgViewLeft) {
-        _imgViewLeft = [UIView createImgViewWithRect:CGRectZero image:nil tag:kTAG_IMGVIEW patternType:@"0"];
+        _imgViewLeft = [UIView createImgViewWithRect:CGRectZero image:nil tag:kTAG_IMGVIEW patternType:@0];
         
     }
     return _imgViewLeft;
@@ -49,14 +49,14 @@
 
 -(UILabel *)labelLeft{
     if (!_labelLeft) {
-        _labelLeft = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL patternType:@"2" font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+        _labelLeft = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL patternType:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
     }
     return _labelLeft;
 }
 
 -(UIButton *)btn{
     if (!_btn) {
-        _btn = [UIView createBtnWithRect:CGRectZero title:@"按钮" font:KFZ_Second image:nil tag:kTAG_BTN patternType:@"7" target:nil aSelector:nil];
+        _btn = [UIView createBtnWithRect:CGRectZero title:@"按钮" font:KFZ_Second image:nil tag:kTAG_BTN patternType:@7 target:nil aSelector:nil];
         
     }
     return _btn;

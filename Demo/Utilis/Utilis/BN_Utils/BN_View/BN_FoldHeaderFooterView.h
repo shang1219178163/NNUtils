@@ -7,7 +7,7 @@
 //
 
 /*
- (弃用)
+ 
  */
 
 #import <UIKit/UIKit.h>
@@ -34,7 +34,7 @@
 @property (nonatomic, assign) NSInteger section;/**< 选中的section */
 @property (nonatomic, weak) id<BN_FoldHeaderFooterViewDelegate> delegate;/**< 代理 */
 
-- (void)foldViewWithTitle:(NSString *)title image:(id)image section:(NSInteger)section isOpen:(BOOL)isOpen isHeader:(BOOL)isHeader patternType:(NSString *)patternType;
+- (void)foldViewWithTitle:(NSString *)title image:(id)image section:(NSInteger)section isOpen:(BOOL)isOpen isHeader:(BOOL)isHeader patternType:(NSNumber *)patternType;
 
 @property (nonatomic, copy) void (^block)(BN_FoldHeaderFooterView *foldView,NSInteger index);;
 

@@ -104,7 +104,7 @@
 //-(UIImageView *)viewIndicator{
 //    if (!_viewIndicator) {
 //        UIImage * imageArrow = [UIImage imageNamed:@"img_arrowRight_gray.png"];
-//        _viewIndicator = [UIView createImgViewWithRect:CGRectZero image:imageArrow tag:kTAG_IMGVIEW patternType:@"0"];
+//        _viewIndicator = [UIView createImgViewWithRect:CGRectZero image:imageArrow tag:kTAG_IMGVIEW patternType:@0];
 //        _viewIndicator.contentMode = UIViewContentModeCenter;
 //
 //    }

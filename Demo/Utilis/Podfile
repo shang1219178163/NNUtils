@@ -40,20 +40,18 @@ target 'Utilis' do
     
 #    pod 'BN_Utils'
 
-    pod 'BN_Kit'
-    pod 'BN_Globle'
-
+#    pod 'BN_Kit'
+#    pod 'BN_Globle'
+#
     pod 'BN_Category'
 #    pod 'BN_View'
 #    pod 'BN_CollectionView'
 #    pod 'BN_TableViewCell'
 #    pod 'BN_ViewHeight'
 
-
 #pod 'FCUUID'
 #pod 'FCUUID'
 #pod 'FCUUID'
-
 
 #import "MBProgressHUD.h"
 #import "PopoverView.h"

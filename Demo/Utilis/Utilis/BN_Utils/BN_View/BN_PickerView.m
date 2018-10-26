@@ -35,7 +35,7 @@
 
 @implementation BN_PickerView
 
-- (instancetype)initWithPickerData:(NSArray *)array patternType:(NSString *)patternType cancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle
+- (instancetype)initWithPickerData:(NSArray *)array patternType:(NSNumber *)patternType cancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle
 {
     
     self = [super init];
@@ -44,12 +44,14 @@
         if ([self.patternType isEqualToString:@"1"]) {
             self.array = [NSArray arrayWithArray:(NSArray *)array];
             
-        }else if ([self.patternType isEqualToString:@"2"]) {
+        }
+        else if ([self.patternType isEqualToString:@"2"]) {
             self.array = [NSArray arrayWithArray:(NSArray *)array];
             self.arr = self.array[0][kPickViewContent];
             self.dict = self.array[0];
             //初始化数据
-        }else{
+        }
+        else{
             NSAssert([self.patternType integerValue] == 1 || [self.patternType integerValue] == 2, @"目前只支持单选和双选联动");
             
         }

@@ -9,6 +9,12 @@
 //
 
 #import "UITextField+Helper.h"
+#import "BN_Globle.h"
+
+#import "NSObject+Helper.h"
+#import "UIView+Helper.h"
+#import "UIScreen+Helper.h"
+#import "UIColor+Helper.h"
 
 @implementation UITextField (Helper)
 
@@ -38,6 +44,7 @@
     }
     return YES;
 }
+
 
 
 @end

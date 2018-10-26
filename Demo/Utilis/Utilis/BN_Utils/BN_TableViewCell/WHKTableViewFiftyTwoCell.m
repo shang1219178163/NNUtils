@@ -70,7 +70,7 @@
 
 -(UILabel *)labelLeftPrefix{
     if (!_labelLeftPrefix) {
-        _labelLeftPrefix = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+5 patternType:@"2" font:KFZ_Second backgroudColor:UIColor.themeColor alignment:NSTextAlignmentLeft];
+        _labelLeftPrefix = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+5 patternType:@2 font:KFZ_Second backgroudColor:UIColor.themeColor alignment:NSTextAlignmentLeft];
     }
     return _labelLeftPrefix;
 }

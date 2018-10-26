@@ -30,14 +30,14 @@
         CGFloat XGapImgView = (CGRectGetWidth(frame) - imgViewSize.width)/2.0;
         
         CGRect imgViewRect = CGRectMake(XGapImgView, YGap, imgViewSize.width, imgViewSize.height);
-        UIImageView * imgView = [self createImgViewWithRect:imgViewRect image:@"img_cardAdd.png" tag:kTAG_IMGVIEW patternType:@"0"];
+        UIImageView * imgView = [self createImgViewWithRect:imgViewRect image:@"img_cardAdd.png" tag:kTAG_IMGVIEW patternType:@0];
         [self addSubview:imgView];
         
         CGSize textSize = [self sizeWithText:title font:@(KFZ_Third) width:CGRectGetWidth(frame)];
         CGFloat XGapLab = (CGRectGetWidth(frame) - textSize.width)/2.0;
         
         CGRect labRect = CGRectMake(XGapLab, CGRectGetMaxY(imgViewRect), textSize.width, kH_LABEL_SMALL);
-        UILabel * lab = [self createLabelWithRect:labRect text:title textColor:UIColor.grayColor tag:kTAG_LABEL patternType:@"2" font:KFZ_Third backgroudColor:nil alignment:NSTextAlignmentCenter];
+        UILabel * lab = [self createLabelWithRect:labRect text:title textColor:UIColor.grayColor tag:kTAG_LABEL patternType:@2 font:KFZ_Third backgroudColor:nil alignment:NSTextAlignmentCenter];
         [self addSubview:lab];
         
         if (image == nil) {
@@ -68,7 +68,7 @@
 }
 
 //imageView通用创建方法
-- (UIImageView *)createImgViewWithRect:(CGRect)rect image:(id)image tag:(NSInteger)tag patternType:(NSString *)patternType
+- (UIImageView *)createImgViewWithRect:(CGRect)rect image:(id)image tag:(NSInteger)tag patternType:(NSNumber *)patternType
 {
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
     imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
@@ -163,7 +163,7 @@
     return imageView;
 }
 
-- (UILabel *)createLabelWithRect:(CGRect)rect text:(id)text textColor:(UIColor *)textColor tag:(NSInteger)tag patternType:(NSString *)patternType font:(CGFloat)fontSize  backgroudColor:(UIColor *)backgroudColor alignment:(NSTextAlignment)alignment
+- (UILabel *)createLabelWithRect:(CGRect)rect text:(id)text textColor:(UIColor *)textColor tag:(NSInteger)tag patternType:(NSNumber *)patternType font:(CGFloat)fontSize  backgroudColor:(UIColor *)backgroudColor alignment:(NSTextAlignment)alignment
 {
     UILabel * label = [[UILabel alloc] initWithFrame:rect];
     if ([text isKindOfClass:[NSString class]]) {

@@ -230,7 +230,6 @@
  关联方法待改进
  */
 - (void)addActionHandler:(void(^)(id obj, id item, NSInteger idx))handler{
-    if (self.tag < kTAG_VIEW) self.tag = kTAG_VIEW;
 
     if ([self isKindOfClass:[UIButton class]]) {
         [(UIButton *)self addTarget:self action:@selector(handleActionBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -244,7 +243,6 @@
         UITapGestureRecognizer *tapGesture = objc_getAssociatedObject(self, _cmd);
         if (!tapGesture){
             tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleActionTapGesture:)];
-            
             tapGesture.numberOfTapsRequired = 1;
             tapGesture.numberOfTouchesRequired = 1;
             
@@ -253,11 +251,9 @@
             
             self.userInteractionEnabled = YES;
             [self addGestureRecognizer:tapGesture];
-            
         }
     }
     objc_setAssociatedObject(self, _cmd, handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
-
 }
 /**
  关联方法待改进
@@ -268,10 +264,9 @@
     if ([sender isKindOfClass:[UISegmentedControl class]]) {
         UISegmentedControl * segmentCtl = sender;
         if (block) block(sender, sender, segmentCtl.selectedSegmentIndex);
-
-    }else{
-        if (block) block(sender, sender, ((UIButton *)sender).tag - kTAG_VIEW);
-
+    }
+    else{
+        if (block) block(sender, sender, ((UIButton *)sender).tag);
     }
 }
 
@@ -281,7 +276,7 @@
 - (void)handleActionTapGesture:(UITapGestureRecognizer *)tapGesture{
     void(^block)(id obj, id item, NSInteger idx) = objc_getAssociatedObject(self, @selector(addActionHandler:));
     if (block){
-        block(tapGesture, tapGesture.view, tapGesture.view.tag - kTAG_VIEW);
+        block(tapGesture, tapGesture.view, tapGesture.view.tag);
 
     }
 }
@@ -327,13 +322,6 @@
         [subview getViewLayer];
         
     }
-}
-
-- (void)showLayer{
-    self.layer.borderWidth = kW_LayerBorder;
-    self.layer.borderColor = UIColor.lineColor.CGColor;
-//    self.layer.borderColor = UIColor.redColor.CGColor;
-
 }
 
 - (void)showLayerColor:(UIColor *)layerColor{
@@ -679,28 +667,6 @@
 //    
 //}
 
-- (void)setOriginX:(CGFloat)originX{
-    CGRect rect = self.frame;
-    rect.origin.x = originX;
-    self.frame = rect;
-    
-}
-
-- (void)setOriginY:(CGFloat)originY{
-    CGRect rect = self.frame;
-    rect.origin.y = originY;
-    self.frame = rect;
-    
-}
-
-- (void)setHeight:(CGFloat)height originY:(CGFloat)originY{
-    CGRect rect = self.frame;
-    rect.size.height = height;
-    rect.origin.y = originY;
-    self.frame = rect;
-    
-}
-
 //向屏幕倾斜
 + (void)transformStateEventWithView:(UIView *)view {
     
@@ -870,6 +836,23 @@
     return tableViewCell;
 }
 
+- (id)asoryView:(NSString *)unitString{
+    //    NSArray * unitList = @[@"元",@"公斤"];
+    NSParameterAssert([self isKindOfClass:[UITextField class]]);
+    NSParameterAssert(unitString != nil && ![unitString isEqualToString:@""]);
+    
+    if ([unitString containsString:@".png"]) {
+        CGSize size = CGSizeMake(20, 20);
+        UIImageView * imgView = [UIView createImgViewWithRect:CGRectMake(0, 0, size.width, size.height) image:unitString tag:kTAG_IMGVIEW patternType:@"0"];
+        return imgView;
+    }
+    
+    CGSize size = [self sizeWithText:unitString font:@(KFZ_Third) width:UIScreen.width];
+    UILabel * label = [UIView createLabelWithRect:CGRectMake(0, 0, size.width+2, 25) text:unitString textColor:kC_TextColor_Title tag:kTAG_LABEL patternType:@"2" font:KFZ_Third backgroudColor:UIColor.clearColor alignment:NSTextAlignmentCenter];
+    return label;
+    
+}
+
 ////信任值展示,无点击手势
 //+ (id)getStarViewRect:(CGRect)rect rateStyle:(NSString *)rateStyle currentScore:(CGFloat)currentScore{
 //    //默认五颗星星
@@ -903,6 +886,7 @@
 //
 //    return starRateView;
 //}
+
 
 
 

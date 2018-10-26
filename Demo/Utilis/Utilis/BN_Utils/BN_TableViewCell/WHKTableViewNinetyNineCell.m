@@ -10,6 +10,7 @@
 #import "WHKTableViewNinetyNineCell.h"
 
 #import "BN_Globle.h"
+#import "UIView+Helper.h"
 
 
 @interface WHKTableViewNinetyNineCell()
@@ -52,7 +53,7 @@
     [self.imgViewRight addGestureRecognizer:tap];
     
     //箭头
-    self.textField.rightView = [self getTextFieldRightView:kIMAGE_arrowRight];
+    self.textField.rightView = [self.textField asoryView:kIMAGE_arrowDown];
     self.textField.rightViewMode = UITextFieldViewModeAlways;
     self.textField.rightView.hidden = !self.imgViewRight.hidden;
 }

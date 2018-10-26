@@ -88,14 +88,14 @@
 #pragma mark - - layz
 -(UIButton *)btnOne{
     if (!_btnOne) {
-        _btnOne = [UIButton createBtnWithRect:CGRectZero title:@"" font:KFZ_Second image:nil tag:kTAG_BTN patternType:@"8" target:nil aSelector:nil];
+        _btnOne = [UIButton createBtnWithRect:CGRectZero title:@"" font:KFZ_Second image:nil tag:kTAG_BTN patternType:@8 target:nil aSelector:nil];
     }
     return _btnOne;
 }
 
 -(UIButton *)btnTwo{
     if (!_btnTwo) {
-        _btnTwo = [UIView createBtnWithRect:CGRectZero title:@"" font:KFZ_Second image:nil tag:kTAG_BTN+1 patternType:@"7" target:nil aSelector:nil];
+        _btnTwo = [UIView createBtnWithRect:CGRectZero title:@"" font:KFZ_Second image:nil tag:kTAG_BTN+1 patternType:@7 target:nil aSelector:nil];
     }
     return _btnTwo;
 }

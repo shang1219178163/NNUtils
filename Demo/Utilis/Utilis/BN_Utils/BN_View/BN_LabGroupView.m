@@ -41,7 +41,7 @@
     if (!_titleList) return;
     
     for (NSInteger i = 0; i < _titleList.count; i++) {
-        UILabel * label = [UIView createLabelWithRect:CGRectZero text:_titleList[i] textColor:nil tag:kTAG_LABEL+i patternType:@"0" font:15 backgroudColor:UIColor.randomColor alignment:NSTextAlignmentCenter];
+        UILabel * label = [UIView createLabelWithRect:CGRectZero text:_titleList[i] textColor:nil tag:kTAG_LABEL+i patternType:@0 font:15 backgroudColor:UIColor.randomColor alignment:NSTextAlignmentCenter];
 //        label.backgroundColor = UIColor.clearColor;
         
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleActionSender:)];

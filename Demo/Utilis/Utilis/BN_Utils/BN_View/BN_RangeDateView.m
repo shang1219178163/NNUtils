@@ -75,7 +75,7 @@
                 break;
         }
         
-        UILabel * label = [UIView createLabelWithRect:rect text:title textColor:nil tag:kTAG_LABEL+i patternType:@"2" font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        UILabel * label = [UIView createLabelWithRect:rect text:title textColor:nil tag:kTAG_LABEL+i patternType:@2 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
         if (i%2 == 1) {
             label.text = [title toDateShort];
             label.layer.borderColor = UIColor.lightGrayColor.CGColor;
@@ -125,7 +125,7 @@
 //                break;
 //        }
 //
-//        UILabel * label = [UIView createLabelWithRect:rect text:title textColor:nil tag:kTAG_LABEL+i patternType:@"2" font:16 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+//        UILabel * label = [UIView createLabelWithRect:rect text:title textColor:nil tag:kTAG_LABEL+i patternType:@2 font:16 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
 //        if (i%2 == 1) {
 //            label.text = [title toDateShort];
 //            [label showLayerColor:UIColor.lightGrayColor];

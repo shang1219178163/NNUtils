@@ -10,8 +10,9 @@
 
 #import "BN_Globle.h"
 #import "NSObject+Helper.h"
-
 #import "NSDictionary+Helper.h"
+#import "UIView+Helper.h"
+
 #import "BN_TextField.h"
 
 @implementation UITableViewPickerListCell
@@ -33,7 +34,7 @@
     self.textField.placeholder = @"请选择";
     self.textField.textAlignment = NSTextAlignmentCenter;
     
-    self.textField.rightView = [self getTextFieldRightView:kIMAGE_arrowDown];
+    self.textField.rightView = [self.textField asoryView:kIMAGE_arrowDown];
     self.textField.rightViewMode = UITextFieldViewModeAlways;
     
     self.textField.delegate = self;

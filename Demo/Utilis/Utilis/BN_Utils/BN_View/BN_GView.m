@@ -124,7 +124,7 @@
                 break;
             case 2://UILabel
             {
-                view = [UIView createLabelWithRect:itemRect text:title textColor:nil tag:kTAG_VIEW+i patternType:@"0" font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+                view = [UIView createLabelWithRect:itemRect text:title textColor:nil tag:kTAG_VIEW+i patternType:@0 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
                 
                 BOOL isSelected = [_selectedList[view.tag - kTAG_VIEW] boolValue];
                 ((UILabel *)view).selected = isSelected;

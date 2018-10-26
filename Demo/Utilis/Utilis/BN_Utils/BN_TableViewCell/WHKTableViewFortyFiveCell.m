@@ -78,7 +78,7 @@
 
 -(UIImageView *)iConEP{
     if (!_iConEP) {
-        _iConEP = [UIView createImgViewWithRect:CGRectZero image:@"icon_company.png" tag:kTAG_VIEW+2 patternType:@"0"];
+        _iConEP = [UIView createImgViewWithRect:CGRectZero image:@"icon_company.png" tag:kTAG_VIEW+2 patternType:@0];
     }
     return _iConEP;
 }

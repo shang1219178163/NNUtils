@@ -38,18 +38,18 @@
      */
     
     //控件1
-    UIButton * btn = [UIView createBtnWithRect:CGRectMake(0, 0, 20, 20) title:nil font:KFZ_Third image:nil tag:kTAG_BTN patternType:@"3" target:self aSelector:@selector(handleActionBtn:)];
+    UIButton * btn = [UIView createBtnWithRect:CGRectMake(0, 0, 20, 20) title:nil font:KFZ_Third image:nil tag:kTAG_BTN patternType:@3 target:self aSelector:@selector(handleActionBtn:)];
     [btn setImage:[UIImage imageNamed:@"img_btn_unSelect.png"] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:@"img_btn_selected.png"] forState:UIControlStateSelected];
 
     [self.contentView addSubview:btn];
     
     //控件2
-    UILabel * labTitle = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL patternType:@"2" font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+    UILabel * labTitle = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL patternType:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
     [self.contentView addSubview:labTitle];
 
     //控件3
-    UILabel * labRight = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+1 patternType:@"2" font:KFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentRight];
+    UILabel * labRight = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+1 patternType:@2 font:KFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentRight];
     [self.contentView addSubview:labRight];
 
     //控件4,5

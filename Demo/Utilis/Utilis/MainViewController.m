@@ -41,26 +41,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = UIColor.whiteColor ;
-    self.view.backgroundColor = UIColor.whiteColor ;
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+//    self.view.backgroundColor = UIColor.whiteColor ;
 
     self.title = self.controllerName;
 
-    [self createBarBtnItemWithTitle:@"Left" imageName:nil isLeft:YES isHidden:NO handler:^(id obj, id item, NSInteger idx) {
-        
+    [self createBarBtnItemWithTitle:@"Left" imageName:nil isLeft:YES isHidden:NO handler:^(id obj,  UIButton * item, NSInteger idx) {
+        DDLog(@"%@",item.titleLabel.text);
     }];
     
-    [self createBarBtnItemWithTitle:@"Right" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+    [self createBarBtnItemWithTitle:@"Right" imageName:nil isLeft:NO isHidden:NO handler:^(id obj,  UIButton * item, NSInteger idx) {
         [self goController:@"ListViewController" title:@"List" obj:nil];
-
         
+        //动画
+//        [self pushController:@"ListViewController" item:item type:@0];
+//        [self presentController:@"ListViewController" item:item type:@0 completion:nil];
     }];
     
     
-    DDLog(@"_%p_%p_",Manger.shared,Manger.shared)
-    [Manger destoryShared];
-    DDLog(@"_%p_%p_",Manger.shared,Manger.shared)
+//    DDLog(@"_%p_%p_",Manger.shared,Manger.shared)
+//    [Manger destoryShared];
+//    DDLog(@"_%p_%p_",Manger.shared,Manger.shared)
 
     self.dataList = @[
                       @"UITableViewDatePickerCell",

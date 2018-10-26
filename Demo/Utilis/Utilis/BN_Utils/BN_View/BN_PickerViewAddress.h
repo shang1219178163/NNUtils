@@ -38,14 +38,6 @@
 
 #define kString_Separate @" "
 
-/**
- 代码块传值
-
- @param pickerView pickerView
- @param address 点击确定返回的地址信息,标准格式:@"内蒙古自治区 呼和浩特市 回民区"
- @param btnIndex 0取消,1确定
- */
-
 @interface BN_PickerViewAddress : UIView
 
 @property (nonatomic, copy) void(^block)(UIPickerView *pickerView, NSString * address,NSInteger btnIndex);
@@ -59,7 +51,7 @@
  @param confirmBtnTitle @"确定"
  @return BN_PickerViewAddress
  */
-+(BN_PickerViewAddress *)pickerViewCancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle;
++ (instancetype *)pickerViewCancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle;
 - (instancetype)initWithCancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle;
 
 /**

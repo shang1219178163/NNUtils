@@ -12,6 +12,7 @@
 #import "NSDictionary+Helper.h"
 #import "NSObject+Helper.h"
 #import "UIView+AddView.h"
+#import "UIView+Helper.h"
 
 #import "BN_TextField.h"
 
@@ -33,7 +34,7 @@
     [self.contentView addSubview:self.textField];
     
     self.textField.placeholder = @"请选择";
-    self.textField.rightView = [self getTextFieldRightView:kIMAGE_arrowDown];
+    self.textField.rightView = [self.textField asoryView:kIMAGE_arrowDown];
     self.textField.rightViewMode = UITextFieldViewModeAlways;
     
     [self.textField addTarget:self action:@selector(handleActionSender:) forControlEvents:UIControlEventEditingDidBegin];
@@ -99,27 +100,6 @@
     
 }
 
-#pragma mark - -getTextFieldRightView
-
-- (id)getTextFieldRightView:(NSString *)unitString{
-    //    NSArray * unitList = @[@"元",@"公斤"];
-    if (unitString != nil && ![unitString isEqualToString:@""]) {
-        if ([unitString containsString:@".png"]) {
-            CGSize size = CGSizeMake(20, 20);
-            UIImageView * imgView = [UIView createImgViewWithRect:CGRectMake(0, 0, size.width, size.height) image:unitString tag:kTAG_IMGVIEW patternType:@"0"];
-            return imgView;
-        }
-        else{
-            CGSize size = [self sizeWithText:unitString font:@(KFZ_Third) width:CGFLOAT_MAX];
-            
-            UILabel * label = [UIView createLabelWithRect:CGRectMake(0, 0, size.width+2, 25) text:unitString textColor:kC_TextColor_Title tag:kTAG_LABEL patternType:@"2" font:KFZ_Third backgroudColor:UIColor.clearColor alignment:NSTextAlignmentCenter];
-            return label;
-        }
-    }
-    return nil;
-}
-
-#pragma mark - -layz
 
 
 @end

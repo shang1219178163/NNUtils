@@ -60,8 +60,8 @@
 //    if (!foldHeaderView) {
 //        foldHeaderView = [[BINFoldHeaderFooterView alloc] initWithReuseIdentifier:identifier];
 //
-//        CALayer * topLayer = [UIView createLayerWithInView:foldHeaderView patternType:@"0"];
-//        CALayer * bottomLayer = [UIView createLayerWithInView:foldHeaderView patternType:@"2"];
+//        CALayer * topLayer = [UIView createLayerWithInView:foldHeaderView patternType:@0];
+//        CALayer * bottomLayer = [UIView createLayerWithInView:foldHeaderView patternType:@2];
 //
 //        [foldHeaderView.layer addSublayer:topLayer];
 //        [foldHeaderView.layer addSublayer:bottomLayer];
@@ -97,7 +97,7 @@
      [self.contentView getViewLayer];
 }
 
-- (void)foldViewWithTitle:(NSString *)title image:(id)image section:(NSInteger)section isOpen:(BOOL)isOpen isHeader:(BOOL)isHeader patternType:(NSString *)patternType{
+- (void)foldViewWithTitle:(NSString *)title image:(id)image section:(NSInteger)section isOpen:(BOOL)isOpen isHeader:(BOOL)isHeader patternType:(NSNumber *)patternType{
     
     self.iscanOPen = YES;
     
@@ -177,7 +177,7 @@
 -(UIImageView *)imgViewArrow{
     if (!_imgViewArrow) {
          UIImage * imageArrow = [UIImage imageNamed:@"img_arrowRight_gray.png"];
-         _imgViewArrow = [UIView createImgViewWithRect:CGRectZero image:imageArrow tag:kTAG_IMGVIEW patternType:@"0"];
+         _imgViewArrow = [UIView createImgViewWithRect:CGRectZero image:imageArrow tag:kTAG_IMGVIEW patternType:@0];
         
     }
     return _imgViewArrow;
@@ -185,7 +185,7 @@
 
 -(UIImageView *)imgViewLeft{
     if (!_imgViewLeft) {
-        _imgViewLeft = [UIView createImgViewWithRect:CGRectZero image:self.image tag:kTAG_IMGVIEW+1 patternType:@"0"];
+        _imgViewLeft = [UIView createImgViewWithRect:CGRectZero image:self.image tag:kTAG_IMGVIEW+1 patternType:@0];
 
     }
     return _imgViewLeft;
@@ -194,7 +194,7 @@
 
 -(UILabel *)labelTitle{
     if (!_labelTitle) {
-        _labelTitle = [UIView createLabelWithRect:CGRectZero text:self.title textColor:nil tag:kTAG_LABEL patternType:@"0" font:14 backgroudColor:UIColor.clearColor alignment:NSTextAlignmentLeft];
+        _labelTitle = [UIView createLabelWithRect:CGRectZero text:self.title textColor:nil tag:kTAG_LABEL patternType:@0 font:14 backgroudColor:UIColor.clearColor alignment:NSTextAlignmentLeft];
         
     }
     return _labelTitle;
@@ -202,7 +202,7 @@
 
 -(UILabel *)labelTitleSub{
     if (!_labelTitleSub) {
-        _labelTitleSub = [UIView createLabelWithRect:CGRectZero text:self.title textColor:nil tag:kTAG_LABEL+1 patternType:@"0" font:14 backgroudColor:UIColor.clearColor alignment:NSTextAlignmentLeft];
+        _labelTitleSub = [UIView createLabelWithRect:CGRectZero text:self.title textColor:nil tag:kTAG_LABEL+1 patternType:@0 font:14 backgroudColor:UIColor.clearColor alignment:NSTextAlignmentLeft];
         
     }
     return _labelTitleSub;

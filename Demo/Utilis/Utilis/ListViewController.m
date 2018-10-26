@@ -14,7 +14,8 @@
 #import <UIImageView+WebCache.h>
 #import <YYWebImage.h>
 
-@interface ListViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@interface ListViewController ()
 
 @property(nonatomic, strong) NSArray *imgList;
 
@@ -25,24 +26,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
     self.imgList = @[@"https://www.huizhubang.com/attachment/rotation/9.jpg",
                    @"https://www.huizhubang.com/attachment/rotation/8.jpg",
                     @"https://www.huizhubang.com/attachment/rotation/7.jpg",];
     
-    for (NSInteger i = 0; i < 5000; i++) {
+    for (NSInteger i = 0; i < 20; i++) {
         [self.dataList addObject:@"1"];
         
     }
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
     
 }
+
+- (void)handlActionBack{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 60;
+//
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataList.count;
@@ -87,5 +92,32 @@
 //    return cell;
 //}
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.01;
+
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+
+    UILabel * label = [[UILabel alloc]initWithFrame:CGRectZero];
+//    label.text = @"     左滑删除";
+    label.textColor = [UIColor redColor];
+    return label;
+
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.01;
+
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
+}
 
 @end

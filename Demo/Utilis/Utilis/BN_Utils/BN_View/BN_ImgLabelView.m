@@ -30,7 +30,7 @@
 -(UILabel *)labelTitle{
     
     if (!_labelTitle) {
-        _labelTitle = [self createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL patternType:@"0" font:KFZ_Third backgroudColor:nil alignment:NSTextAlignmentLeft];;
+        _labelTitle = [self createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL patternType:@0 font:KFZ_Third backgroudColor:nil alignment:NSTextAlignmentLeft];;
     }
     return _labelTitle;
 }
@@ -116,7 +116,7 @@
 }
 
 #pragma mark - -otherFuntions
-- (UILabel *)createLabelWithRect:(CGRect)rect text:(NSString *)text textColor:(UIColor *)textColor tag:(NSInteger)tag patternType:(NSString *)patternType font:(CGFloat)fontSize  backgroudColor:(UIColor *)backgroudColor alignment:(NSTextAlignment)alignment{
+- (UILabel *)createLabelWithRect:(CGRect)rect text:(NSString *)text textColor:(UIColor *)textColor tag:(NSInteger)tag patternType:(NSNumber *)patternType font:(CGFloat)fontSize  backgroudColor:(UIColor *)backgroudColor alignment:(NSTextAlignment)alignment{
     UILabel * label = [[UILabel alloc] initWithFrame:rect];
     [label setText:text];
     [label setTextColor:textColor];
