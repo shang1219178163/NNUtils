@@ -37,6 +37,13 @@
     }
     [self.view addSubview:self.tableView];
     
+    @weakify(self);
+    self.block = ^(UIViewController * _Nonnull controller, NSString * _Nonnull title) {
+        @strongify(self);
+        self.tableView.backgroundColor = UIColor.randomColor;
+        
+    };
+    
 }
 
 - (void)handlActionBack{
@@ -94,7 +101,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    [self dismissViewControllerAnimated:YES completion:nil];
-    
+    if (self.block) {
+        self.block(self, NSStringFromIndexPath(indexPath));
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
