@@ -46,11 +46,11 @@
 
     self.title = self.controllerName;
 
-    [self createBarBtnItemWithTitle:@"Left" imageName:nil isLeft:YES isHidden:NO handler:^(id obj,  UIButton * item, NSInteger idx) {
+    [self createBarItemTitle:@"Left" imageName:nil isLeft:YES isHidden:NO handler:^(id obj,  UIButton * item, NSInteger idx) {
         DDLog(@"%@",item.titleLabel.text);
     }];
     
-    [self createBarBtnItemWithTitle:@"Right" imageName:nil isLeft:NO isHidden:NO handler:^(id obj,  UIButton * item, NSInteger idx) {
+    [self createBarItemTitle:@"Right" imageName:nil isLeft:NO isHidden:NO handler:^(id obj,  UIButton * item, NSInteger idx) {
         [self goController:@"ListViewController" title:@"List" obj:nil];
         
         //动画
