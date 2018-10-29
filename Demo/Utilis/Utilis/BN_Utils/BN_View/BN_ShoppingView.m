@@ -58,7 +58,7 @@
 -(UIButton *)btnDoIt{
     if (!_btnDoIt) {
         CGRect rectBtn = CGRectMake(kScreen_width - kScreen_width/3.0, 0, kScreen_width/3.0, CGRectGetHeight(self.frame));
-        _btnDoIt = [UIView createBtnWithRect:rectBtn title:@"下一步" font:KFZ_Second image:nil tag:kTAG_BTN+1 patternType:@"1" target:self aSelector:@selector(handleActionBtn:)];
+        _btnDoIt = [UIView createBtnWithRect:rectBtn title:@"下一步" font:KFZ_Second image:nil tag:kTAG_BTN+1 type:@1 target:self aSelector:@selector(handleActionBtn:)];
     }
     return _btnDoIt;
 }
@@ -88,7 +88,7 @@
     if (!_labPriceAll) {
         NSString * titleSub = @"0个订单  共0元";
         CGRect rectSub = CGRectMake(CGRectGetMidX(self.btnRadio.frame), CGRectGetMaxY(self.btnRadio.frame), CGRectGetMinX(self.btnDoIt.frame) - CGRectGetMidX(self.btnRadio.frame), kH_LABEL);
-        _labPriceAll = [UIView createLabelWithRect:rectSub text:titleSub textColor:nil tag:kTAG_LABEL patternType:@2 font:KFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+        _labPriceAll = [UIView createLabelWithRect:rectSub text:titleSub textColor:nil tag:kTAG_LABEL type:@2 font:KFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
         
     }
     return _labPriceAll;

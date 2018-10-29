@@ -290,7 +290,7 @@ static BN_Map * _singleton = nil;
 
 - (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate{
     
-    //    DDLog(@"distance___%@",[BN_Map distanceBetweenBeginPoint:self.coordinateBegin endPoint:self.coordinateEnd type:@"0"]);
+    //    DDLog(@"distance___%@",[BN_Map distanceBetweenBeginPoint:self.coordinateBegin endPoint:self.coordinateEnd type:@0]);
     //    [self addAnnotionCoordinate:coordinate title:kPointTypeEnd];
 }
 
@@ -384,7 +384,7 @@ static BN_Map * _singleton = nil;
     [self.searchAPI AMapInputTipsSearch:self.InputTipsRequest];
 }
 
--(void)routeSearchBeginPoint:(CLLocationCoordinate2D)beginPoint endPoint:(CLLocationCoordinate2D)endPoint strategy:(NSInteger)strategy type:(NSString *)type handler:(MapRouteHandler)handler{
+-(void)routeSearchBeginPoint:(CLLocationCoordinate2D)beginPoint endPoint:(CLLocationCoordinate2D)endPoint strategy:(NSInteger)strategy type:(NSNumber *)type handler:(MapRouteHandler)handler{
     self.routeHandler = handler;
     //    AMapDrivingRouteSearchRequest *request = [[AMapDrivingRouteSearchRequest alloc] init];
     
@@ -484,7 +484,7 @@ static BN_Map * _singleton = nil;
 }
 
 #pragma mark - -other funtions
-+ (NSString *)distanceBetweenBegin:(CLLocationCoordinate2D )beginPoint end:(CLLocationCoordinate2D )endPoint type:(NSString *)type{
++ (NSString *)distanceBetweenBegin:(CLLocationCoordinate2D )beginPoint end:(CLLocationCoordinate2D )endPoint type:(NSNumber *)type{
     
     MAMapPoint begin = MAMapPointForCoordinate(beginPoint);
     MAMapPoint end = MAMapPointForCoordinate(endPoint);
@@ -492,7 +492,7 @@ static BN_Map * _singleton = nil;
     CLLocationDistance distance =  MAMetersBetweenMapPoints(begin, end);
     NSString * distanceStr = [@(distance) stringValue];
     
-    switch ([type integerValue]) {//返回米
+    switch (type.integerValue) {//返回米
         case 0:
         {
             return distanceStr;

@@ -42,7 +42,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
-//    self.view.backgroundColor = UIColor.whiteColor ;
+    self.view.backgroundColor = UIColor.whiteColor ;
 
     self.title = self.controllerName;
 
@@ -74,14 +74,14 @@
                       @"UITableViewTextViewCell",
 
                       ].mutableCopy;
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+ 
     [self.view addSubview:self.tableView];
+    [self.view getViewLayer];
+    
 }
 
--(void)viewWillLayoutSubviews{
-    [super viewWillLayoutSubviews];
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
     
 }
@@ -107,7 +107,7 @@
 //    UITableViewDatePickerCell * cell = [UITableViewDatePickerCell cellWithTableView:tableView];
 
     switch (indexPath.row) {
-            case 0:
+        case 0:
         {
             UITableViewDatePickerCell * cell = [UITableViewDatePickerCell cellWithTableView:tableView];
             cell.labelLeft.text = @"日期选择:";
@@ -115,7 +115,7 @@
 
         }
             break;
-            case 1:
+        case 1:
         {
             UITableViewDateRangeCell * cell = [UITableViewDateRangeCell cellWithTableView:tableView];
             cell.labelLeft.text = @"日期选择:";
@@ -123,7 +123,7 @@
             return cell;
         }
             break;
-            case 2:
+        case 2:
         {
             UITableViewSegmentCell * cell = [UITableViewSegmentCell cellWithTableView:tableView];
             cell.labelLeft.text = @"商品数量:";
@@ -131,7 +131,7 @@
             return cell;
         }
             break;
-            case 3:
+        case 3:
         {
             UITableViewStepCell * cell = [UITableViewStepCell cellWithTableView:tableView];
             cell.labelLeft.text = @"商品名称:";
@@ -139,7 +139,7 @@
             return cell;
         }
             break;
-            case 4:
+        case 4:
         {
             
             UITableViewPickerListCell * cell = [UITableViewPickerListCell cellWithTableView:tableView];
@@ -149,7 +149,7 @@
             return cell;
         }
             break;
-            case 5:
+        case 5:
         {
             
             UITableViewAddressPickerCell * cell = [UITableViewAddressPickerCell cellWithTableView:tableView];
@@ -159,7 +159,7 @@
             return cell;
         }
             break;
-            case 6:
+        case 6:
         {
             UITableViewTextFieldCell * cell = [UITableViewTextFieldCell cellWithTableView:tableView];
             cell.labelLeft.text = @"输入姓名:";
@@ -168,7 +168,7 @@
         }
             break;
             
-            case 7:
+        case 7:
         {
             UITableViewTextViewCell * cell = [UITableViewTextViewCell cellWithTableView:tableView];
             cell.labelLeft.text = @"备注信息:";
@@ -176,10 +176,24 @@
             return cell;
         }
             break;
+        case 8:
+        {
+            WHKTableViewZeroCell * cell = [WHKTableViewZeroCell cellWithTableView:tableView];
+
+            CGRect rect = CGRectMake(10, 10, kScreen_width - 20, 30);
+            UITextField * textField = [UIView createTextFieldWithRect:rect text:@"测试" placeholder:nil font:16 textAlignment:NSTextAlignmentLeft keyboardType:UIKeyboardTypeDefault];
+            
+            [cell.contentView addSubview:textField];
+            
+            [cell.contentView getViewLayer];
+            
+            return cell;
+        }
+            break;
         default:
+            DDLog(@"%@",NSStringFromIndexPath(indexPath));
             break;
     }
-    
     return nil;
 
 }

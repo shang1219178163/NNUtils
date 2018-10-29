@@ -85,7 +85,7 @@
 
 @property (nonatomic, strong) NSString *title;
 
-- (instancetype)initWithPickerData:(NSArray *)array patternType:(NSNumber *)patternType cancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle;
+- (instancetype)initWithPickerData:(NSArray *)array patternType:(NSString *)patternType cancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle;
 
 - (void )actionSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 

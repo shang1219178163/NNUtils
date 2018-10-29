@@ -82,11 +82,11 @@ UIKIT_EXTERN const CGFloat kW_LINE_Vert ;
 
 #pragma mark - -font
 
-UIKIT_EXTERN const CGFloat KFZ_First ;
-UIKIT_EXTERN const CGFloat KFZ_Second ;
-UIKIT_EXTERN const CGFloat KFZ_Third ;
-UIKIT_EXTERN const CGFloat KFZ_Fouth ;
-UIKIT_EXTERN const CGFloat KFZ_Fifth ;
+UIKIT_EXTERN const CGFloat kFZ_First ;
+UIKIT_EXTERN const CGFloat kFZ_Second ;
+UIKIT_EXTERN const CGFloat kFZ_Third ;
+UIKIT_EXTERN const CGFloat kFZ_Fouth ;
+UIKIT_EXTERN const CGFloat kFZ_Fifth ;
 
 #pragma mark - -视图
 

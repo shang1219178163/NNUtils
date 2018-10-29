@@ -92,10 +92,28 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowDown_black.png"
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowDown_gray.png"
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowDown_orange.png"
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowLeft_white.png"
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowRight_gray.png"
+  install_resource "${PODS_ROOT}/BN_View/BN_View/BN_Resource/area.plist"
+  install_resource "${PODS_ROOT}/BN_View/BN_View/BN_Resource/b27_icon_star_gray@2x.png"
+  install_resource "${PODS_ROOT}/BN_View/BN_View/BN_Resource/b27_icon_star_yellow@2x.png"
+  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowDown_black.png"
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowDown_gray.png"
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowDown_orange.png"
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowLeft_white.png"
+  install_resource "${PODS_ROOT}/BN_TableViewCell/BN_TableViewCell/Resources/img_arrowRight_gray.png"
+  install_resource "${PODS_ROOT}/BN_View/BN_View/BN_Resource/area.plist"
+  install_resource "${PODS_ROOT}/BN_View/BN_View/BN_Resource/b27_icon_star_gray@2x.png"
+  install_resource "${PODS_ROOT}/BN_View/BN_View/BN_Resource/b27_icon_star_yellow@2x.png"
+  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
 fi

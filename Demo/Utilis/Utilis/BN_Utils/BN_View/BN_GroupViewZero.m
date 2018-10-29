@@ -62,7 +62,7 @@
             NSString * title = items[i];
             CGRect btnRect = CGRectMake(x, y, w, h);
             NSString * type = [selectedList containsObject:title] ? @"8": @"0";
-            UIButton * btn = [UIView createBtnWithRect:btnRect title:title font:15 image:nil tag:kTAG_BTN+i patternType:type target:self aSelector:@selector(handleActionBtn:)];
+            UIButton * btn = [UIView createBtnWithRect:btnRect title:title font:15 image:nil tag:kTAG_BTN+i type:type target:self aSelector:@selector(handleActionBtn:)];
             
             if ([self.selectedList containsObject:title]) {
                 [self handleSender:btn backgroudColor:UIColor.themeColor textColor:UIColor.whiteColor layerColor:UIColor.themeColor];

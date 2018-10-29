@@ -53,7 +53,7 @@
             
             NSString * imgName_H = dict[BN_ItemImage_H] ? : dict[BN_ItemImage_N];
             NSString * imgName = [dict[BN_ItemSelected] boolValue] == YES ? imgName_H : dict[BN_ItemImage_N];
-            UIView * itemView = [self createBtnViewWithRect:CGRectMake(i*itemWidth, 0, itemWidth, CGRectGetHeight(frame)) imgName:imgName imgHeight:kH_LABEL title:dict[BN_ItemTitle] titleColor:titleColor patternType:[type stringValue]];
+            UIView * itemView = [self createBtnViewWithRect:CGRectMake(i*itemWidth, 0, itemWidth, CGRectGetHeight(frame)) imgName:imgName imgHeight:kH_LABEL title:dict[BN_ItemTitle] titleColor:titleColor type:[type stringValue]];
             itemView.tag = kTAG_VIEW + i;
             
  
@@ -118,7 +118,7 @@
     }
 }
 
-- (UIView *)createBtnViewWithRect:(CGRect)rect imgName:(NSString *)imgName imgHeight:(CGFloat)imgHeight title:(NSString *)title titleColor:(UIColor *)titleColor patternType:(NSNumber *)patternType
+- (UIView *)createBtnViewWithRect:(CGRect)rect imgName:(NSString *)imgName imgHeight:(CGFloat)imgHeight title:(NSString *)title titleColor:(UIColor *)titleColor type:(NSNumber *)type
 {
     
     UIView * backgroudView = [[UIView alloc]initWithFrame:rect];
@@ -146,7 +146,7 @@
     imgV.tag = kTAG_IMGVIEW;
     
     CGRect labRect = CGRectZero;
-    switch ([patternType integerValue]) {
+    switch ([type integerValue]) {
         case 0://图上字下
         {
             CGSize imgSize = CGSizeMake(35, 35);

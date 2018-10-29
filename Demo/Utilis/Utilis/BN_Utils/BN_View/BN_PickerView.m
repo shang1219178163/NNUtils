@@ -35,7 +35,7 @@
 
 @implementation BN_PickerView
 
-- (instancetype)initWithPickerData:(NSArray *)array patternType:(NSNumber *)patternType cancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle
+- (instancetype)initWithPickerData:(NSArray *)array patternType:(NSString *)patternType cancelBtnTitle:(NSString *)cancelBtnTitle confirmBtnTitle:(NSString *)confirmBtnTitle
 {
     
     self = [super init];

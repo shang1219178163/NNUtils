@@ -86,11 +86,11 @@ const CGFloat kW_LINE_Vert =  3.0;
 
 #pragma mark - -font
 
-const CGFloat KFZ_First =  18;
-const CGFloat KFZ_Second = 16;
-const CGFloat KFZ_Third =  14;
-const CGFloat KFZ_Fouth =  12;
-const CGFloat KFZ_Fifth =  10;
+const CGFloat kFZ_First =  18;
+const CGFloat kFZ_Second = 16;
+const CGFloat kFZ_Third =  14;
+const CGFloat kFZ_Fouth =  12;
+const CGFloat kFZ_Fifth =  10;
 
 #pragma mark - -视图
 

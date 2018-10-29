@@ -139,7 +139,7 @@ typedef void (^MapNaviDriverHandler)(AMapNaviDriveManager *driveManager, NSError
 /**
  路径搜索
  */
-- (void)routeSearchBeginPoint:(CLLocationCoordinate2D)beginPoint endPoint:(CLLocationCoordinate2D)endPoint strategy:(NSInteger)strategy type:(NSString *)type handler:(MapRouteHandler)handler;
+- (void)routeSearchBeginPoint:(CLLocationCoordinate2D)beginPoint endPoint:(CLLocationCoordinate2D)endPoint strategy:(NSInteger)strategy type:(NSNumber *)type handler:(MapRouteHandler)handler;
 
 /**
  返回2点之间直线距离
@@ -147,7 +147,7 @@ typedef void (^MapNaviDriverHandler)(AMapNaviDriveManager *driveManager, NSError
  @param type 0返回米.1返回公里
  @return 返回值
  */
-+ (NSString *)distanceBetweenBegin:(CLLocationCoordinate2D )beginPoint end:(CLLocationCoordinate2D )endPoint type:(NSString *)type;
++ (NSString *)distanceBetweenBegin:(CLLocationCoordinate2D )beginPoint end:(CLLocationCoordinate2D )endPoint type:(NSNumber *)type;
 
 /**
  获取指定title的针

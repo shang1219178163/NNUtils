@@ -103,7 +103,7 @@ static const CGFloat padding = 10;
         CGSize customeViewSize = CGSizeZero;
         
         if (title != nil) {
-            UILabel * lableTitle = [UIView createLabelWithRect:labelRectTitle text:title textColor:nil tag:kTAG_LABEL patternType:@2 font:KFZ_First backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+            UILabel * lableTitle = [UIView createLabelWithRect:labelRectTitle text:title textColor:nil tag:kTAG_LABEL type:@2 font:KFZ_First backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
             [self addSubview:lableTitle];
             self.labTitle = lableTitle;
             
@@ -185,7 +185,7 @@ static const CGFloat padding = 10;
         for (NSInteger i = 0; i < btnCount; i++) {
             
             CGRect btnRect = CGRectMake(CGRectGetWidth(self.frame)/btnCount * i, CGRectGetHeight(self.frame) - kH_BTN, CGRectGetWidth(self.frame)/btnCount, kH_BTN);
-            UIButton * btn = [UIView createBtnWithRect:btnRect title:btnTitles[i] font:KFZ_First image:nil tag:kTAG_BTN+i patternType:@2 target:self aSelector:@selector(handleBtnAction:)];
+            UIButton * btn = [UIView createBtnWithRect:btnRect title:btnTitles[i] font:KFZ_First image:nil tag:kTAG_BTN+i type:@2 target:self aSelector:@selector(handleBtnAction:)];
             [self addSubview:btn];
             [self.btnMarr addObject:btn];
             
@@ -346,7 +346,7 @@ static const CGFloat padding = 10;
             rectLab = CGRectMake(labelGapX, CGRectGetMaxY(rectLab)+kPadding, size.width, viewHeight);
             
         }
-        UILabel * label = [UIView createLabelWithRect:rectLab text:modol.title textColor:nil tag:kTAG_LABEL+i patternType:@2 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        UILabel * label = [UIView createLabelWithRect:rectLab text:modol.title textColor:nil tag:kTAG_LABEL+i type:@2 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
         label.baselineAdjustment = UIBaselineAdjustmentNone;
 
         CGRect rectTextField = CGRectMake(CGRectGetMaxX(rectLab)+kPadding, CGRectGetMinY(rectLab), CGRectGetWidth(backgroudView.frame) - CGRectGetMaxX(rectLab) - kPadding - labelGapX, viewHeight);

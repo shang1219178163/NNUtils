@@ -89,7 +89,7 @@
 
 -(UIImageView *)imgViewLeft{
     if (!_imgViewLeft) {
-        _imgViewLeft = [UIView createImgViewWithRect:CGRectZero image:nil tag:kTAG_IMGVIEW patternType:@0];
+        _imgViewLeft = [UIView createImgViewWithRect:CGRectZero image:nil tag:kTAG_IMGVIEW type:@0];
         
     }
     return _imgViewLeft;
@@ -98,7 +98,7 @@
 
 -(UIImageView *)imgViewRight{
     if (!_imgViewRight) {
-        _imgViewRight = [UIView createImgViewWithRect:CGRectZero image:kIMAGE_arrowRight tag:kTAG_IMGVIEW+1 patternType:@0];
+        _imgViewRight = [UIView createImgViewWithRect:CGRectZero image:kIMAGE_arrowRight tag:kTAG_IMGVIEW+1 type:@0];
 //        _imgViewRight.hidden = YES;
         
     }
@@ -108,35 +108,35 @@
 
 -(UILabel *)labelLeft{
     if (!_labelLeft) {
-        _labelLeft = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL patternType:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+        _labelLeft = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL type:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
     }
     return _labelLeft;
 }
 
 -(UILabel *)labelLeftMark{
     if (!_labelLeftMark) {
-        _labelLeftMark = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+1 patternType:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+        _labelLeftMark = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+1 type:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
     }
     return _labelLeftMark;
 }
 
 -(UILabel *)labelLeftSub{
     if (!_labelLeftSub) {
-        _labelLeftSub = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+2 patternType:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+        _labelLeftSub = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+2 type:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
     }
     return _labelLeftSub;
 }
 
 -(UILabel *)labelLeftSubMark{
     if (!_labelLeftSubMark) {
-        _labelLeftSubMark = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+3 patternType:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+        _labelLeftSubMark = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+3 type:@2 font:KFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
     }
     return _labelLeftSubMark;
 }
 
 -(UILabel *)labelRight{
     if (!_labelRight) {
-        _labelRight = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+4 patternType:@2 font:KFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentRight];
+        _labelRight = [UIView createLabelWithRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+4 type:@2 font:KFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentRight];
     }
     return _labelRight;
 }

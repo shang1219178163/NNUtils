@@ -56,12 +56,12 @@
         switch ([_type integerValue] ) {
             case 0://uibutton
             {
-                view = [UIView createBtnWithRect:itemRect title:title font:15 image:nil tag:kTAG_VIEW+i patternType:@5 target:nil aSelector:nil];
+                view = [UIView createBtnWithRect:itemRect title:title font:15 image:nil tag:kTAG_VIEW+i type:@5 target:nil aSelector:nil];
             }
                 break;
             case 1://UIImageVIew
             {
-//                view = [UIView createImgViewWithRect:itemRect image:title tag:kTAG_VIEW+i+50 patternType:@0];
+//                view = [UIView createImgViewWithRect:itemRect image:title tag:kTAG_VIEW+i+50 type:@0];
                 view = [[UIImageView alloc]initWithFrame:itemRect];
                 view.tag = kTAG_VIEW + i;
                 UIImageView * imgView = (UIImageView *)view;
@@ -70,7 +70,7 @@
                 break;
             case 2://UILabel
             {
-                view = [UIView createLabelWithRect:itemRect text:title textColor:nil tag:kTAG_VIEW+i patternType:@0 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+                view = [UIView createLabelWithRect:itemRect text:title textColor:nil tag:kTAG_VIEW+i type:@0 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
                 
             }
                 break;
@@ -128,18 +128,18 @@
 //            switch ([type integerValue] ) {
 //                case 0://uibutton
 //                {
-//                    view = [UIView createBtnWithRect:itemRect title:title font:15 image:nil tag:kTAG_BTN+i patternType:@5 target:nil aSelector:nil];
+//                    view = [UIView createBtnWithRect:itemRect title:title font:15 image:nil tag:kTAG_BTN+i type:@5 target:nil aSelector:nil];
 //                }
 //                    break;
 //                case 1://UIImageVIew
 //                {
-//                    view = [UIView createImgViewWithRect:itemRect image:title tag:kTAG_IMGVIEW+i patternType:@0];
+//                    view = [UIView createImgViewWithRect:itemRect image:title tag:kTAG_IMGVIEW+i type:@0];
 //
 //                }
 //                    break;
 //                case 2://UILabel
 //                {
-//                    view = [UIView createLabelWithRect:itemRect text:title textColor:nil tag:kTAG_LABEL+i patternType:@0 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+//                    view = [UIView createLabelWithRect:itemRect text:title textColor:nil tag:kTAG_LABEL+i type:@0 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
 //
 //                }
 //                    break;

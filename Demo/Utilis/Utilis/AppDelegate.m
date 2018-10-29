@@ -26,6 +26,7 @@
 //    controlName = @"MapViewController";
     [UIApplication setupRootController:controlName];
     [UIApplication setupAppearance];
+    [UIApplication setupIQKeyboardManager];
     
     [AMapServices sharedServices].apiKey = @"f9432b82381130a60425b129d5744427";
 
