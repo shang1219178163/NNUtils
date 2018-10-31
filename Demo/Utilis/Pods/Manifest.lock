@@ -30,7 +30,7 @@ PODS:
   - BN_Globle (1.1.6)
   - BN_Kit (1.2.0):
     - BN_Globle
-  - BN_TableViewCell (1.2.1):
+  - BN_TableViewCell (1.2.2):
     - BN_Category
     - BN_Globle
     - BN_Kit
@@ -76,6 +76,7 @@ DEPENDENCIES:
   - BN_Globle
   - BN_Kit
   - BN_TableViewCell
+  - BN_View
   - FCUUID
   - FLAnimatedImage
   - GTMBase64
@@ -126,7 +127,7 @@ SPEC CHECKSUMS:
   BN_Category: 85168657f4942f370058c1e1afd987559aec00eb
   BN_Globle: c0f21f8e58fc83b75013f183430dfc53fc1a088d
   BN_Kit: 8cc0855b3cb5037a487848e899129e07ea4d3ecf
-  BN_TableViewCell: cacf495ace3e08d05984b67216dce6e0f1d6916f
+  BN_TableViewCell: 9d4d6f8abf846954cedf79748a4903918eaf3a5e
   BN_View: 60d55b3d935d1b27f66a5554bbae6235fe902eff
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
@@ -147,6 +148,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: c07d1d137d015e5e2d9bba5693074325ef8b5ed5
+PODFILE CHECKSUM: b5273a8e996b1e7289b5caeed194d6a30bc3ba03
 
 COCOAPODS: 1.5.0

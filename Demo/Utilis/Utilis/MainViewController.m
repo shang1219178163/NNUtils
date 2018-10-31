@@ -13,7 +13,7 @@
 
 //#import "BN_Utils.h"
 //#import "BN_View.h"
-#import "BN_TableView.h"
+#import "BN_TableViewCell.h"
 //#import "BN_CollectionView.h"
 
 #import "Manger.h"
