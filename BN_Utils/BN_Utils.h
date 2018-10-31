@@ -13,7 +13,7 @@
 #import "BN_Kit.h"
 #import "BN_Category.h"
 #import "BN_View.h"
-#import "BN_TableView.h"
+#import "BN_TableViewCell.h"
 #import "BN_CollectionView.h"
 #import "BN_ViewHeight.h"
 
@@ -22,13 +22,13 @@
 //#import <BN_Utils/BN_Kit.h>
 //#import <BN_Utils/BN_Category.h>
 //#import <BN_Utils/BN_View.h>
-//#import <BN_Utils/BN_TableView.h>
+//#import <BN_Utils/BN_TableViewCell.h>
 //#import <BN_Utils/BN_CollectionView.h>
 //#else
 //#import "BN_Globle.h"
 //#import "BN_Kit.h"
 //#import "BN_Category.h"
 //#import "BN_View.h"
-//#import "BN_TableView.h"
+//#import "BN_TableViewCell.h"
 //#import "BN_CollectionView.h"
 //#endif
