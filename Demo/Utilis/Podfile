@@ -33,10 +33,13 @@ target 'Utilis' do
     
 #    pod 'AMap2DMap-NO-IDFA'
 
- 
+#    pod 'AMap3DMap-NO-IDFA'
+#    pod 'AMapLocation-NO-IDFA'
+#    pod 'AMapNavi-NO-IDFA'
+#    pod 'AMapSearch-NO-IDFA'
+
     
 #    pod 'BN_Utils'
-
 
     pod 'BN_Kit'
     pod 'BN_Globle'

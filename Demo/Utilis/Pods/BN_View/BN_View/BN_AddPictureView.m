@@ -131,7 +131,7 @@
 -(void)handleActionTap:(UITapGestureRecognizer *)tap{
     
     UIImageView * imageView = (UIImageView *)tap.view;
-    if ([imageView.image isEquelImgName:kIMAGE_defaultAddPhoto]) {
+    if ([imageView.image isEquelImage:kIMAGE_defaultAddPhoto]) {
         
         if (self.maxCount != 0) {
             [self.attDict setObject:@(self.maxCount) forKey:kPicture_maxCount];

@@ -16,7 +16,7 @@
 
 #define DDLog(FORMAT, ...) {\
 NSString *formatStr = @"yyyy-MM-dd HH:mm:ss.SSSSSSZ";\
-NSMutableDictionary *threadDic = [[NSThread currentThread] threadDictionary];\
+NSMutableDictionary *threadDic = NSThread.currentThread.threadDictionary;\
 NSDateFormatter *formatter = [threadDic objectForKey:formatStr];\
 if (!formatter) {\
 formatter = [[NSDateFormatter alloc]init];\

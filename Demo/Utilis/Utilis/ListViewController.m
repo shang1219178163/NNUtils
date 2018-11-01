@@ -9,7 +9,7 @@
 #import "ListViewController.h"
 
 #import "BN_Category.h"
-#import "BN_TableView.h"
+#import "BN_TableViewCell.h"
 
 #import <UIImageView+WebCache.h>
 #import <YYWebImage.h>
@@ -26,7 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    self.title = @"list";
+    
     self.imgList = @[@"https://www.huizhubang.com/attachment/rotation/9.jpg",
                    @"https://www.huizhubang.com/attachment/rotation/8.jpg",
                     @"https://www.huizhubang.com/attachment/rotation/7.jpg",];

@@ -24,6 +24,12 @@
     
     NSString * controlName = @"MainViewController";
 //    controlName = @"MapViewController";
+    
+    NSArray * list = @[@"MainViewController",@"ListViewController",];
+    list = @[@[@"MainViewController",@"one",@"",@"",@"8"],@[@"ListViewController",@"two",@"",@"",@"11"]];
+//    controlName = UITarBarCtrFromList(list);
+    
+    
     [UIApplication setupRootController:controlName];
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];

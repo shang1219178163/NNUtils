@@ -19,7 +19,13 @@ UIKIT_EXTERN NSString * NSStringFromLet(id obj);
 UIKIT_EXTERN NSString * NSStringFromInt(NSInteger obj);
 UIKIT_EXTERN NSString * NSStringFromFloat(CGFloat obj);
 
+UIKIT_EXTERN UIViewController * UIViewCtrFromString(NSString *obj);
+UIKIT_EXTERN UINavigationController * UINaviCtrFromObj(id obj);
+UIKIT_EXTERN UITabBarController * UITarBarCtrFromList(NSArray *list);
+
 UIKIT_EXTERN UIImage * UIImageFromColor(UIColor * color);
+UIKIT_EXTERN UIImage * UIImageFromString(NSString * obj);
+UIKIT_EXTERN UIImage * UIImageFromObj(id obj);
 
 UIKIT_EXTERN UIColor * UIColorFromRGBA(CGFloat r,CGFloat g,CGFloat b,CGFloat a);
 UIKIT_EXTERN UIColor * UIColorFromRGB(CGFloat r,CGFloat g,CGFloat b);
@@ -30,20 +36,18 @@ UIKIT_EXTERN UIColor * UIColorFromHex(NSInteger hexValue);
 
 UIKIT_EXTERN BOOL iOSVersion(CGFloat version);
 
-UIKIT_EXTERN CGFloat BN_RadianFromDegrees(CGFloat x);//由角度转换弧度
-UIKIT_EXTERN CGFloat BN_DegreesFromRadian(CGFloat x);//弧度转换角度
+UIKIT_EXTERN CGFloat CGRadianFromDegrees(CGFloat x);//由角度转换弧度
+UIKIT_EXTERN CGFloat CGDegreesFromRadian(CGFloat x);//弧度转换角度
 
 UIKIT_EXTERN CGFloat roundFloat(CGFloat value,NSInteger num);
 
 
-@interface NSObject (Helper)
+@interface NSObject (Helper)<NSCoding>
 
-void BN_dispatchAsyncMain(void(^block)(void));
-void BN_dispatchAsyncGlobal(void(^block)(void));
-//void dispatchAfterDelay(void(^block)(void));
-void BN_dispatchAfterDelay(double delay ,void(^block)(void));
-
-void BN_dispatchApply(id obj ,void(^block)(dispatch_queue_t queue, size_t index));
+void dispatchAsyncMain(void(^block)(void));
+void dispatchAsyncGlobal(void(^block)(void));
+void dispatchAfterMain(double delay ,void(^block)(void));
+void dispatchApplyGlobal(id obj ,void(^block)(size_t index));
 
 /**
  代码块返回单个参数的时候,不适用于id不能代表的类型()

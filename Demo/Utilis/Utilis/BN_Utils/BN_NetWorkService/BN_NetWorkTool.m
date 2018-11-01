@@ -231,12 +231,12 @@ static AFNetworkReachabilityManager *_reachabilityManager;
     
     for (NSUInteger i = 0; i < images.count; i++) {
         // 图片经过等比压缩后得到的二进制文件
-        NSData *imageData = [UIImage compressImageDataFromImage:images[i] maxFileSize:kFileSize_image];
+        NSData *imageData = [images[i] compressToFileSize:kFileSize_image];
         NSString *imageType = [UIImage contentTypeForImageData:imageData];
         
         // 默认图片的文件名, 若fileNames为nil就使用
         NSDateFormatter *formatter = [NSDateFormatter dateFormat:@"yyyyMMddHHmmss"];
-        NSString *dateStr = [formatter stringFromDate:[NSDate date]];
+        NSString *dateStr = [formatter stringFromDate:NSDate.date];
         NSString *imageFileName = NSStringFormat(@"%@%ld.%@",dateStr,(unsigned long)i,imageType?:@"jpg");
         
         NSString *name = fileNames[i] ? : [namePefix stringByAppendingFormat:@"%@",@(i+1)];

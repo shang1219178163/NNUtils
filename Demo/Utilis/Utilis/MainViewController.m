@@ -84,6 +84,12 @@
     [super viewWillAppear:animated];
     
     
+    NSArray *array = @[@"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i", @"j"];
+    dispatchApplyGlobal(array, ^(size_t index) {
+        DDLog(@"%@",array[index]);
+    });
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
