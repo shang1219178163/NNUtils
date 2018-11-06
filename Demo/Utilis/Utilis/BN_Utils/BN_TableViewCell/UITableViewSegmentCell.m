@@ -21,7 +21,7 @@
     }
     return self;
 }
-
+ 
 - (void)createControls{
     //文字+segment
     [self.contentView addSubview:self.labelLeft];

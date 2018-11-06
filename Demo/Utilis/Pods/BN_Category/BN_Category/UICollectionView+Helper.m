@@ -32,7 +32,7 @@
     objc_setAssociatedObject(self, @selector(dictClass), dictClass, OBJC_ASSOCIATION_COPY_NONATOMIC);
 
     for (NSString * key in dictClass.allKeys) {
-        if ([key isEqualToString:UICollectionElementSectionItem]) {
+        if ([key isEqualToString:UICollectionElementKindSectionItem]) {
             [self bn_registerListClass:dictClass[key]];
             
         }else{
@@ -67,7 +67,7 @@
 - (void)bn_registerListClassReusable:(NSArray *)listClass kind:(NSString *)kind{
     
     for (NSString * className in listClass) {
-        NSString * identifier = [[self class] viewIdentifierByClassName:className kind:kind];
+        NSString * identifier = [self.class viewIdentifierByClassName:className kind:kind];
         [self registerClass:NSClassFromString(className) forSupplementaryViewOfKind:kind withReuseIdentifier:identifier];
 //        NSLog(@"%@,%@,%@",NSClassFromString(className),kind,identifier);
     }

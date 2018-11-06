@@ -10,6 +10,10 @@
 
 #import "UITableViewCell+AddView.h"
 
+ 
+/**
+ 银行卡(待完善)
+ */
 @interface UITableViewBankCardCell : UITableViewCell
 
 @property (nonatomic, strong) UIView *shadowBgView;/**<阴影背景view*/

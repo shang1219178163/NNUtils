@@ -70,7 +70,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    WHKTableViewZeroCell *cell = [WHKTableViewZeroCell cellWithTableView:tableView];
+    UITableViewZeroCell *cell = [UITableViewZeroCell cellWithTableView:tableView];
     cell.textLabel.text = NSStringFromIndexPath(indexPath);
     NSInteger idx = arc4random() % self.imgList.count;
     NSURL *url = [NSURL URLWithString:self.imgList[idx]];
@@ -88,14 +88,14 @@
                         }
                        completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
                            if (from == YYWebImageFromDiskCache) {
-                               NSLog(@"load from disk cache");
+//                               NSLog(@"load from disk cache");
                            }
                        }];
     return cell;
 }
 
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    WHKTableViewZeroCell *cell = [WHKTableViewZeroCell cellWithTableView:tableView];
+//    UITableViewZeroCell *cell = [UITableViewZeroCell cellWithTableView:tableView];
 //    cell.textLabel.text = NSStringFromIndexPath(indexPath);
 //    NSInteger idx = arc4random() % self.imgList.count;
 //    NSURL *url = [NSURL URLWithString:self.imgList[idx]];

@@ -15,7 +15,7 @@
 #import "BN_TextView.h"
 
 @interface UITableViewTextViewCell ()<UITextViewDelegate>
-
+ 
 @end
 
 @implementation UITableViewTextViewCell

@@ -6,7 +6,7 @@
 //  Copyright © 2018年 WeiHouKeJi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BN_Category.h"
 
 @interface BN_CTReusableViewZero : UICollectionReusableView
 

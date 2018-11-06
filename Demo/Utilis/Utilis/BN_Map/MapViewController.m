@@ -78,8 +78,8 @@
     [self routePlanAction];
     
     
-    NSString *a = NSStringFromClass([self class]);
-    NSString *b = NSStringFromClass([self class]);
+    NSString *a = NSStringFromClass(self.class);
+    NSString *b = NSStringFromClass(self.class);
     DDLog(@"%p,%p",a,b);
     
     

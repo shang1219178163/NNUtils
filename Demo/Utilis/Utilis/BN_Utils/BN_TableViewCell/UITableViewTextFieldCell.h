@@ -10,6 +10,9 @@
 
 #import "UITableViewCell+AddView.h"
 
+/**
+ BN_TextField
+ */
 @interface UITableViewTextFieldCell : UITableViewCell<UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString * string;

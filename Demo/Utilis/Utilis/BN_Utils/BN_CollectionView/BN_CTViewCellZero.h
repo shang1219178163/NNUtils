@@ -10,7 +10,6 @@
 #import "BN_Globle.h"
 #import <BN_Category/UICollectionViewCell+AddView.h>
 
-
 @interface BN_CTViewCellZero : UICollectionViewCell
 
 @end

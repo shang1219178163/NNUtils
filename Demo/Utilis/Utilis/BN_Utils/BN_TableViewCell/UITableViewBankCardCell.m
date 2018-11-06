@@ -12,7 +12,7 @@
 #import "NSObject+Helper.h"
 
 @interface UITableViewBankCardCell ()
-
+ 
 @end
 
 @implementation UITableViewBankCardCell

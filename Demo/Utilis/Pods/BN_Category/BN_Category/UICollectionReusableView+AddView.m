@@ -18,7 +18,7 @@
 @dynamic label,labelSub,imgView;
 
 + (instancetype)viewWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath kind:(NSString *)kind{
-    NSString * identifier = [UICollectionView viewIdentifierByClassName:NSStringFromClass([self class]) kind:kind];
+    NSString * identifier = [UICollectionView viewIdentifierByClassName:NSStringFromClass(self.class) kind:kind];
     UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:identifier forIndexPath:indexPath];
     
     NSString * titleHeader = [NSString stringWithFormat:@"HeaderView_%@",@(indexPath.section)];
@@ -31,7 +31,7 @@
 
 //+ (instancetype)viewWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath kind:(NSString *)kind{
 //
-//    NSString * identifier = [UICollectionView viewIdentifierByClassName:NSStringFromClass([self class]) kind:kind];
+//    NSString * identifier = [UICollectionView viewIdentifierByClassName:NSStringFromClass(self.class) kind:kind];
 //    UICollectionReusableView *view = nil;
 //    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
 //        view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:identifier forIndexPath:indexPath];
@@ -80,9 +80,9 @@
     if (lab == nil) {
         lab = ({
             UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
-            label.tag = kTAG_LABEL + 4;
+            label.tag = kTAG_LABEL;
             label.font = [UIFont systemFontOfSize:17];
-            label.textAlignment = NSTextAlignmentRight;
+            label.textAlignment = NSTextAlignmentLeft;
             
             label.numberOfLines = 0;
             label.userInteractionEnabled = YES;
@@ -99,7 +99,7 @@
     if (lab == nil) {
         lab = ({
             UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
-            label.tag = kTAG_LABEL;
+            label.tag = kTAG_LABEL + 1;
             label.font = [UIFont systemFontOfSize:17];
             label.textAlignment = NSTextAlignmentLeft;
             

@@ -12,10 +12,13 @@
 
 #import "BN_PickerViewAddress.h"
 
+
+/**
+ 地址选择器(常规)
+ */
 @interface UITableViewAddressPickerCell : UITableViewCell<UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString * addressInfo;
-
 @property (nonatomic, strong) BN_PickerViewAddress * pickerAddress;
 
 @property (nonatomic, strong) void(^block)(UITableViewAddressPickerCell *view, NSString * addressInfo);

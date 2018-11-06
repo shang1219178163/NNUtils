@@ -6,8 +6,7 @@
 //  Copyright © 2018年 WeiHouKeJi. All rights reserved.
 //
 
-#ifndef BN_UICollectionView_h
-#define BN_UICollectionView_h
+#import <UIKit/UIKit.h>
 
 #pragma mark - -cell
 
@@ -21,7 +20,6 @@
 
 #pragma mark - -layout
 
-
 #import "BN_CTViewLayoutZero.h"
 #import "BN_CTViewLayoutOne.h"
 
@@ -33,5 +31,3 @@
 #import "BN_CTReusableViewThree.h"
 #import "BN_CTReusableViewFour.h"
 
-
-#endif /* BN_UICollectionView_h */

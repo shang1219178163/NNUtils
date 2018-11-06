@@ -10,6 +10,9 @@
 
 #import "UITableViewCell+AddView.h"
 
+/**
+ 时间选择(开始-截止)
+ */
 @interface UITableViewDateRangeCell : UITableViewCell<UITextFieldDelegate>
 
 @property (nonatomic, strong) BN_TextField * textFieldLeft;

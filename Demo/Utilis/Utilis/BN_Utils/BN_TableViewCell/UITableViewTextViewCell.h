@@ -10,6 +10,9 @@
 
 #import "UITableViewCell+AddView.h"
 
+/**
+ BN_TextView
+ */
 @interface UITableViewTextViewCell : UITableViewCell
 
 @property (nonatomic, strong) NSNumber *type;

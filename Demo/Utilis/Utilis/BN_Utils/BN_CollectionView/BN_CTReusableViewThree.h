@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface BN_CTReusableViewThree : UICollectionReusableView
 
 @property (nonatomic, strong) UIView * lineView;

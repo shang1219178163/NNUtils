@@ -15,16 +15,26 @@
 //#import "BN_View.h"
 #import "BN_TableViewCell.h"
 //#import "BN_CollectionView.h"
+#import "BN_ViewHeight.h"
 
 #import "Manger.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic, strong) NSDictionary * dic;
+@property(nonatomic, strong) BN_CycleCTView *cycleCTView;
 
 @end
 
 @implementation MainViewController
+
+-(BN_CycleCTView *)cycleCTView{
+    if (!_cycleCTView) {
+        _cycleCTView = [[BN_CycleCTView alloc]initWithFrame:CGRectMake(0, 10, CGRectGetWidth(self.view.frame), 130)];
+        _cycleCTView.imgList = @[@"postImage.jpg",@"postImage.jpg",@"postImage.jpg",@"postImage.jpg",@"postImage.jpg"];
+    }
+    return _cycleCTView;
+}
 
 -(NSDictionary *)dic{
     if (!_dic) {
@@ -75,7 +85,10 @@
 
                       ].mutableCopy;
  
-    [self.view addSubview:self.tableView];
+//    [self.view addSubview:self.tableView];
+    
+    [self.view addSubview:self.cycleCTView];
+
     [self.view getViewLayer];
     
 }
@@ -86,7 +99,7 @@
     
     NSArray *array = @[@"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i", @"j"];
     dispatchApplyGlobal(array, ^(size_t index) {
-        DDLog(@"%@",array[index]);
+//        DDLog(@"%@",array[index]);
     });
     
     
@@ -115,6 +128,7 @@
     switch (indexPath.row) {
         case 0:
         {
+            
             UITableViewDatePickerCell * cell = [UITableViewDatePickerCell cellWithTableView:tableView];
             cell.labelLeft.text = @"日期选择:";
             return cell;
@@ -184,7 +198,7 @@
             break;
         case 8:
         {
-            WHKTableViewZeroCell * cell = [WHKTableViewZeroCell cellWithTableView:tableView];
+            UITableViewZeroCell * cell = [UITableViewZeroCell cellWithTableView:tableView];
 
             CGRect rect = CGRectMake(10, 10, kScreen_width - 20, 30);
             UITextField * textField = [UIView createTextFieldWithRect:rect text:@"测试" placeholder:nil font:16 textAlignment:NSTextAlignmentLeft keyboardType:UIKeyboardTypeDefault];

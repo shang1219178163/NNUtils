@@ -11,6 +11,9 @@
 #import "UITableViewCell+AddView.h"
 #import "PPNumberButton.h"
 
+/**
+ 购物车加减商品
+ */
 @interface UITableViewStepCell : UITableViewCell
 
 @property (nonatomic, strong) PPNumberButton * numberBtnLeft;

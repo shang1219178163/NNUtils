@@ -20,7 +20,7 @@
 #import "BN_DatePicker.h"
 
 @interface UITableViewDateRangeCell ()
-
+ 
 @property (nonatomic, copy) NSString * dateStart;
 @property (nonatomic, copy) NSString * dateEnd;
 

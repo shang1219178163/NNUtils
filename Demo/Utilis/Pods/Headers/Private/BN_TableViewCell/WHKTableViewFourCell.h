@@ -1,1 +1,0 @@
-../../../BN_TableViewCell/BN_TableViewCell/WHKTableViewFourCell.h

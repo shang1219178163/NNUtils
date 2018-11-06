@@ -8,6 +8,7 @@
 
 #import "BN_CTViewCellFive.h"
 
+
 @implementation BN_CTViewCellFive
 
 - (id)initWithFrame:(CGRect)frame{

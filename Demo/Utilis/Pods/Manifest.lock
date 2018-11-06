@@ -15,7 +15,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - BN_Category (1.3.5):
+  - BN_Category (1.3.9):
     - AESCrypt-ObjC
     - BN_Globle
     - BN_Kit
@@ -27,21 +27,24 @@ PODS:
     - SDWebImage
     - Toast
     - YYModel
-  - BN_Globle (1.1.6)
+  - BN_CollectionView (1.1.6):
+    - BN_Category
+  - BN_Globle (1.1.9)
   - BN_Kit (1.2.0):
     - BN_Globle
-  - BN_TableViewCell (1.2.2):
-    - BN_Category
-    - BN_Globle
-    - BN_Kit
-    - BN_View
-  - BN_View (1.2.3):
+  - BN_View (1.2.4):
     - BN_Category
     - BN_Globle
     - BN_Kit
     - PPNumberButton
     - SDCycleScrollView
     - TZImagePickerController
+  - BN_ViewHeight (1.1.5):
+    - BN_Category
+    - BN_CollectionView
+    - BN_Globle
+    - BN_Kit
+    - BN_View
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
   - FLAnimatedImage (1.0.12)
@@ -58,7 +61,7 @@ PODS:
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - Toast (4.0.0)
-  - TZImagePickerController (3.0.9)
+  - TZImagePickerController (3.1.0)
   - UICKeyChainStore (2.1.2)
   - YYCache (1.0.4)
   - YYImage (1.0.4):
@@ -73,10 +76,11 @@ DEPENDENCIES:
   - AESCrypt-ObjC
   - AFNetworking
   - BN_Category
+  - BN_CollectionView
   - BN_Globle
   - BN_Kit
-  - BN_TableViewCell
   - BN_View
+  - BN_ViewHeight
   - FCUUID
   - FLAnimatedImage
   - GTMBase64
@@ -98,10 +102,11 @@ SPEC REPOS:
     - AESCrypt-ObjC
     - AFNetworking
     - BN_Category
+    - BN_CollectionView
     - BN_Globle
     - BN_Kit
-    - BN_TableViewCell
     - BN_View
+    - BN_ViewHeight
     - FCUUID
     - FLAnimatedImage
     - GTMBase64
@@ -124,11 +129,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  BN_Category: eb7da6aa43b99950b23b1b2072c387d958a44909
-  BN_Globle: c0f21f8e58fc83b75013f183430dfc53fc1a088d
+  BN_Category: 8467284c8f36df970e0e117f500dfb9808a06dcc
+  BN_CollectionView: cd6f35db007fb5bfc73b264910905930c54d4891
+  BN_Globle: e10f7f9a856cf72a4dd211409f97db650e484dde
   BN_Kit: 8cc0855b3cb5037a487848e899129e07ea4d3ecf
-  BN_TableViewCell: 9d4d6f8abf846954cedf79748a4903918eaf3a5e
-  BN_View: 173b730dfb65946d38817e7cdfd8de5d37252bb2
+  BN_View: a48dcd6c473302159e814caaf833968c8539f152
+  BN_ViewHeight: 6021ad947674d323fd93c674c3d65ca8be16b5f6
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
@@ -141,13 +147,13 @@ SPEC CHECKSUMS:
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  TZImagePickerController: ea3e906af8caa7088f612ad673feb73cc6aa6bfc
+  TZImagePickerController: c9584b67b97d5a20b4dbbb58505fa0b6be590255
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 1b4c5c82315d99bc69c88565706ec3bac76486a7
+PODFILE CHECKSUM: 80e6b3757fcc991270dcb4b39d10f956d2108999
 
 COCOAPODS: 1.5.0

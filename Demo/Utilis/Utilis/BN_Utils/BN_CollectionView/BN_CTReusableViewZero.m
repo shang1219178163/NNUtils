@@ -8,7 +8,6 @@
 
 #import "BN_CTReusableViewZero.h"
 #import "BN_Globle.h"
-#import "BN_Category.h"
 
 @interface BN_CTReusableViewZero ()
 

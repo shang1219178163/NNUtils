@@ -1,0 +1,1 @@
+../../../BN_CollectionView/BN_CollectionView/BN_CTViewCellSeven.h

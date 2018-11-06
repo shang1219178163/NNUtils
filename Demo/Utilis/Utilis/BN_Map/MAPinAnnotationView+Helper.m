@@ -30,7 +30,7 @@ static NSString *_identifer = @"MAPinAnnotationView";
 }
 
 +(instancetype)viewWithMapView:(MAMapView *)mapView annotation:(id<MAAnnotation>)annotation{
-//    NSString *identifier = NSStringFromClass([self class]);
+//    NSString *identifier = NSStringFromClass(self.class);
 //    return [self viewWithMapView:mapView annotation:annotation identifier:identifier];
     return [self viewWithMapView:mapView annotation:annotation identifier:_identifer];
 
