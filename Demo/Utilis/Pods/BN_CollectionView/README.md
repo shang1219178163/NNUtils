@@ -1,2 +1,0 @@
-# BN_CollectionView
-UICollectionView封装

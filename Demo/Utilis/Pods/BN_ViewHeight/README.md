@@ -1,2 +1,0 @@
-# BN_ViewHeight
-高复杂度自定义View,UITableViewCell或者UICollectionView可能会是其子视图
