@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 
-  s.name         = "BN_Utils"
-  s.version      = "1.2.3"
-  s.summary      = "BN_Utils是一个项目模板开发工具包"
-  s.description  = "BN_Utils是一个项目模板开发工具包,包含了一些控件封装，工具类等，可加快开发速度。"
+  s.name         = "BNUtils"
+  s.version      = "1.2.4"
+  s.summary      = "BNUtils是一个项目模板开发工具包"
+  s.description  = "BNUtils是一个项目模板开发工具包,包含了一些控件封装，工具类等，可加快开发速度。"
 
-  s.homepage     = "https://github.com/shang1219178163/BN_Utils"
+  s.homepage     = "https://github.com/shang1219178163/BNUtils"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -16,19 +16,19 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/shang1219178163/BN_Utils.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/shang1219178163/BNUtils.git", :tag => "#{s.version}" }
 
-  s.source_files = 'BN_Utils/*.{h,m}'
-  # s.public_header_files = 'BN_Utils/*.{h}'
-  s.public_header_files = 'BN_Utils/BN_Utils.{h}'
+  s.source_files = 'BNUtils/*.{h,m}'
+  # s.public_header_files = 'BNUtils/*.{h}'
+  s.public_header_files = 'BNUtils/BNUtils.{h}'
 
-  s.dependency 'BN_Kit'
-  s.dependency 'BN_Globle'
-  s.dependency 'BN_Category'
-  s.dependency 'BN_CollectionView'
-  s.dependency 'BN_TableViewCell'
-  s.dependency 'BN_View'
-  s.dependency 'BN_ViewHeight'
+  s.dependency 'BNKit'
+  s.dependency 'BNGloble'
+  s.dependency 'BNCategory'
+  s.dependency 'BNCollectionView'
+  s.dependency 'BNTableViewCell'
+  s.dependency 'BNView'
+  s.dependency 'BNViewHeight'
 
 
   s.frameworks = 'UIKit', 'CoreFoundation', 'CoreText', 'CoreGraphics', 'CoreImage',
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/CommonCrypto"
 
   # s.resource  = "icon.png"
-  # s.resources = "BN_Utils/BN_Resources/*.png"
+  # s.resources = "BNUtils/BNResources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
