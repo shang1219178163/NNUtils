@@ -2,8 +2,8 @@ Pod::Spec.new do |s|
 
   s.name         = "BNUtils"
   s.version      = "1.2.4"
-  s.summary      = "BNUtils是一个项目模板开发工具包"
-  s.description  = "BNUtils是一个项目模板开发工具包,包含了一些控件封装，工具类等，可加快开发速度。"
+  s.summary      = "BNUtils是一个项目模板开发组件集合"
+  s.description  = "BNUtils是一个项目模板开发组件集合,包含了一些控件封装，工具类等，可提高App开发效率和质量。"
 
   s.homepage     = "https://github.com/shang1219178163/BNUtils"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
