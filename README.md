@@ -1,19 +1,20 @@
-# BN_Utils
+# BNUtils
 OC项目通用组件Pod封装
 
 构成如下:
-BN_Kit  -   基础控件库
 
-BN_Globle -   基础宏,常量值,第三方appKey配置
+BNKit  -   基础控件库
 
-BN_Category -   组件化核心模块,通过类别方式极大的扩展基础类功能
+BNGloble -   基础宏,常量值,第三方appKey配置
 
-BN_View -   官方控件无法满足需求的视图集合.
+BNCategory -   组件化核心模块,通过类别方式极大的扩展基础类功能
 
-BN_CollectionView -   UICollectionView相关封装.
+BNView -   官方控件无法满足需求的视图集合.
 
-BN_TableViewCell  -   UITableViewCell相关封装.
+BNCollectionView -   UICollectionView通用化/高复用性封装.
 
-BN_ViewHeight -   官方控件无法满足需求的视图集合 - 复杂.
+BNTableViewCell  -   UITableViewCell通用化/高复用性封装.
+
+BNViewHeight -   官方控件无法满足需求的视图集合 - 复杂.
 
 
