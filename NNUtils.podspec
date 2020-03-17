@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "NNUtils"
-  s.version      = "1.3.0"
+  s.version      = "1.3.0.1"
   s.summary      = "NNUtils是一个项目模板开发组件集合"
   s.description  = "NNUtils是一个项目模板开发组件集合,包含了一些控件封装，工具类等，可提高App开发效率和质量。"
 
